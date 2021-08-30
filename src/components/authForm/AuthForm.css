@@ -1,0 +1,23 @@
+.auth-form {
+  width: 460px;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.form-header h1 {
+  color: #2c2738;
+  font-size: 34px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.form-header p {
+  display: inline-block;
+  font-weight: 400;
+  margin: 0;
+}
+
+.form-header a {
+  margin-left: 6px;
+}

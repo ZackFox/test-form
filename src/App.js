@@ -1,9 +1,11 @@
+import React from "react";
+
+import AuthForm from "./components/authForm/AuthForm";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p> App.js</p>
-      </header>
+      <AuthForm />
     </div>
   );
 }
