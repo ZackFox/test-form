@@ -7,18 +7,20 @@ function Input({
   label,
   name,
   value,
+  placeholder,
   changeHandler,
-  isError = false,
-  errorText,
   className,
 }) {
   return (
     <div className={`input ${className}`}>
       <label>{label}</label>
-      <input type={type} name={name} value={value} onChange={changeHandler} />
-      <p className={`input_message ${isError ? "input_message--error" : ""}`}>
-        {errorText}
-      </p>
+      <input
+        type={type}
+        name={name}
+        value={value}
+        onChange={changeHandler}
+        placeholder={placeholder}
+      />
     </div>
   );
 }
