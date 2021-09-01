@@ -36,7 +36,20 @@ function AuthForm() {
 
   const submit = (e) => {
     e.preventDefault();
-    setErrors(validate(values));
+    const validated = validate(values);
+    setErrors(validated);
+
+    if (Object.keys(validated).length === 0) {
+      alert(`
+            Данные формы
+
+            Имя: ${values.name},
+            Email: ${values.email},
+            Телефон: ${values.phone},
+            Язык: ${values.selected},
+            соглашение: ${values.isAgree},
+        `);
+    }
   };
 
   const isSubmiting =
