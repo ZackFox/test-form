@@ -2,21 +2,19 @@ import React, { useState } from "react";
 
 import "./Select.css";
 
-function Select({ defaultValue, label, name, items }) {
-  const [selected, setSelected] = useState(defaultValue);
+function Select({ value, label, name, items, changeHandler }) {
   const [dropdownState, setDropdownState] = useState(false);
 
   const dropdownHandler = () => setDropdownState(!dropdownState);
 
   const selectHandler = (item) => () => {
-    setSelected(item);
+    changeHandler(item);
     setDropdownState(false);
   };
 
   return (
     <div className="select">
       <label>{label}</label>
-      <input type="text" hidden name={name} value={selected} />
 
       <div
         className={`select_input ${
@@ -24,7 +22,7 @@ function Select({ defaultValue, label, name, items }) {
         }`}
         onClick={dropdownHandler}
       >
-        {selected}
+        {value}
       </div>
 
       <div
