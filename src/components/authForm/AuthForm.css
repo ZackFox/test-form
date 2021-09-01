@@ -4,6 +4,11 @@
   background: #fff;
   border-radius: 20px;
 }
+@media screen and (max-width: 580px) {
+  .auth-form {
+    width: 320px;
+  }
+}
 
 .form-header h1 {
   color: #2c2738;
@@ -20,4 +25,14 @@
 
 .form-header a {
   margin-left: 6px;
+}
+
+.agreement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.agreement p {
+  margin-left: 5px;
 }
